@@ -1,0 +1,59 @@
+set sel_M [atomselect top "element H"]
+set sel_C [atomselect top "element He"]
+set sel_N [atomselect top "element Li"]
+set sel_A [atomselect top "element Be"]
+set sel_B [atomselect top "element B"]
+
+color Element H 19
+color Element He 1
+color Element Li 0
+color Element Be 0
+color Element B 1
+
+
+display projection orthographic
+mol delrep 0 top
+
+mol selection element H
+mol color Element
+mol addrep top
+
+mol selection element He
+mol color Element
+mol addrep top
+
+
+mol selection element Li
+mol color Element
+mol addrep top
+
+mol selection element Be
+mol color Element
+mol addrep top
+
+mol selection element B
+mol color Element 
+mol addrep top
+
+mol modstyle 0 top {VDW 0.750 10}
+mol modstyle 1 top {VDW 0.500 10}
+mol modstyle 2 top {VDW 0.750 10}
+mol modstyle 3 top {VDW 0.750 10}
+mol modstyle 4 top {VDW 0.750 10}
+
+mol modmaterial 0 top Diffuse
+mol modmaterial 1 top Diffuse
+mol modmaterial 2 top Diffuse
+mol modmaterial 3 top Diffuse
+mol modmaterial 4 top Diffuse
+
+$sel_M set radius 1.0
+$sel_C set radius 1.0
+$sel_N set radius 1.0
+$sel_A set radius 1.0
+$sel_B set radius 1.0
+
+
+color Display Background white
+display depthcue off
+
