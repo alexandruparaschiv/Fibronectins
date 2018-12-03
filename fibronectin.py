@@ -9,11 +9,13 @@ class Fibronectins:
 
         self.side_lengthx = self.side_lengthy = self.side_lengthz = 200
 
-        self.no_rods = 9
         self.beads_per_rod = 10
         self.beads_per_loop = 9
         self.bead_spacing = 1
+
         self.atoms = [];
+
+        self.atoms = []
         self.molecules = []
         self.atomic_index = 0
         self.molecular_index = 0
