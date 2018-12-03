@@ -17,6 +17,7 @@ class Fibronectins:
         self.bead_spacing = 1
         self.hydrogen_bond_strength = 1.2;
 
+        #
         self.atoms = []
         self.molecules = []
         self.bonds = []
@@ -45,8 +46,15 @@ class Fibronectins:
 
                 self.atomic_index += 1
 
-                self.atoms.append((self.atomic_index,self.molecular_index,1,x,y+i*0.5*self.no_rods,z+j*self.bead_spacing))
-                self.atoms.append((self.atomic_index+self.beads_per_rod,self.molecular_index,bead_type,x,y+0.15+i*0.5*self.no_rods-1,z+j*self.bead_spacing))
+                core_x = x
+                core_y = y+i*0.5*self.no_rods
+                core_z = z+j*self.bead_spacing
+                self.atoms.append((self.atomic_index,self.molecular_index,1,core_x,core_y,core_z))
+
+                patch_x = x
+                patch_y = y+0.15+i*0.5*self.no_rods-1
+                patch_z = z+j*self.bead_spacing
+                self.atoms.append((self.atomic_index+self.beads_per_rod,self.molecular_index,bead_type,patch_x,patch_y,patch_z))
 
                 if j != self.beads_per_rod - 1 :
                     self.bonds.append((self.atomic_index,self.atomic_index+1))
@@ -59,14 +67,11 @@ class Fibronectins:
             for k in range(self.beads_per_loop):
 
                 self.atomic_index += 1
-                orientation = 0
-                if i % 2 == 0:
-                    orientation = 1
-                else:
-                    orientation = -1
+                orientation = 1 if not i%2 else -1
                 theta = math.pi/(self.beads_per_loop-1)
 
                 if orientation == 1:
+
 
 
                     self.atoms.append((self.atomic_index, self.molecular_index, 4, x, y+i*0.5*self.no_rods - 2*self.bead_spacing*(1-math.cos(k*theta)),-1+z-2*self.bead_spacing*math.sin(k*theta)))
@@ -96,7 +101,7 @@ class Fibronectins:
                     else:
                         print((self.atomic_index,self.atomic_index-1),(self.atomic_index,self.atomic_index-4*self.beads_per_rod))
                         self.bonds.append((self.atomic_index,self.atomic_index-1))
-                        self.bonds.append((self.atomic_index,self.atomic_index-4*self.beads_per_rod-k))
+                        self.bonds.append((self.atomic_index,self.atomic_index-3*self.beads_per_rod-2*self.beads_per_loop))
 
 
 if __name__ == "__main__":
