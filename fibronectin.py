@@ -9,29 +9,34 @@ class Fibronectins:
 
     def __init__(self):
 
+        # sets the simulation parameters
         self.side_lengthx = self.side_lengthy = self.side_lengthz = 200
 
+        # sets the parameters of a fibronectin monomer
         self.no_rods = 9
         self.beads_per_rod = 10
         self.beads_per_loop = 9
         self.bead_spacing = 1
-        self.hydrogen_bond_strength = 1.2;
+        self.hydrogen_bond_epsilon = 1.2
 
-        #
+        # contains information about the monomer topology
         self.atoms = []
         self.molecules = []
         self.bonds = []
         self.atomic_index = 0
         self.molecular_index = 0
 
+        # controls the output
         self.trajectory_file = "fibro.xyz"
+        self.topology_file = "topology.dat"
+        self.dynamics_file = "in.fibronectins"
 
 
 
         make_system(self)
-
         write_topology_file(self)
         write_lammps_file(self)
+        print("The system was initialised successfully!")
 
 
     def make_monomer(self,x,y,z):
@@ -54,7 +59,8 @@ class Fibronectins:
                 patch_x = x
                 patch_y = y+0.15+i*0.5*self.no_rods-1
                 patch_z = z+j*self.bead_spacing
-                self.atoms.append((self.atomic_index+self.beads_per_rod,self.molecular_index,bead_type,patch_x,patch_y,patch_z))
+                self.atoms.append((self.atomic_index+self.beads_per_rod,self.molecular_index,bead_type,
+                                    patch_x,patch_y,patch_z))
 
                 if j != self.beads_per_rod - 1 :
                     self.bonds.append((self.atomic_index,self.atomic_index+1))
@@ -73,8 +79,11 @@ class Fibronectins:
                 if orientation == 1:
 
 
+                    loop_x = x
+                    loop_y = y+i*0.5*self.no_rods - 2*self.bead_spacing*(1-math.cos(k*theta))
+                    loop_z = -1+z-2*self.bead_spacing*math.sin(k*theta)
 
-                    self.atoms.append((self.atomic_index, self.molecular_index, 4, x, y+i*0.5*self.no_rods - 2*self.bead_spacing*(1-math.cos(k*theta)),-1+z-2*self.bead_spacing*math.sin(k*theta)))
+                    self.atoms.append((self.atomic_index, self.molecular_index, 4, loop_x,loop_y,loop_z))
                     if k == 0:
                         self.bonds.append((self.atomic_index,self.atomic_index-2*self.beads_per_rod))
 
@@ -84,22 +93,23 @@ class Fibronectins:
                     else:
                         self.bonds.append((self.atomic_index,self.atomic_index-1))
                         if i != 0:
-                            print((self.atomic_index,self.atomic_index-4*self.beads_per_rod-self.beads_per_loop-k))
                             self.bonds.append((self.atomic_index,self.atomic_index-4*self.beads_per_rod-self.beads_per_loop-k))
 
                 else:
 
-                    self.atoms.append((self.atomic_index, self.molecular_index, 5, x, y+i*0.5*self.no_rods - 2*self.bead_spacing*(1-math.cos(k*theta)), 1+z+2*self.bead_spacing*math.sin(k*theta)+self.beads_per_rod*self.bead_spacing))
+                    loop_x = x
+                    loop_y = y+i*0.5*self.no_rods - 2*self.bead_spacing*(1-math.cos(k*theta))
+                    loop_z = +z+2*self.bead_spacing*math.sin(k*theta)+self.beads_per_rod*self.bead_spacing
+
+                    self.atoms.append((self.atomic_index, self.molecular_index, 5, loop_x, loop_y,loop_z))
 
                     if k == 0:
-                        print((self.atomic_index,self.atomic_index-self.beads_per_rod-1))
                         self.bonds.append((self.atomic_index,self.atomic_index-self.beads_per_rod-1))
 
                     elif k < self.beads_per_loop - 1:
                         self.bonds.append((self.atomic_index,self.atomic_index-1))
 
                     else:
-                        print((self.atomic_index,self.atomic_index-1),(self.atomic_index,self.atomic_index-4*self.beads_per_rod))
                         self.bonds.append((self.atomic_index,self.atomic_index-1))
                         self.bonds.append((self.atomic_index,self.atomic_index-3*self.beads_per_rod-2*self.beads_per_loop))
 

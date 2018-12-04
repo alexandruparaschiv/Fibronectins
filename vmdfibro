@@ -7,8 +7,8 @@ set sel_B [atomselect top "element B"]
 color Element H 19
 color Element He 1
 color Element Li 0
-color Element Be 14
-color Element B 15
+color Element Be 19
+color Element B 19
 
 
 display projection orthographic
