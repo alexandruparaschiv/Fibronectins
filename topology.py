@@ -10,7 +10,8 @@ def write_topology_file(self):
     " "+str(self.side_lengthz)+" zlo zhi\n \t"
 
 
-    header += "\nMasses\n\n \t1 50.000\n\t2 50.000\n\t3 50.000\n\t4 50.000\n\t5 50.000\n\n"
+    header += "\nMasses\n\n \t1 "+str(self.atom_mass)+"\n\t2 "+str(self.atom_mass)+\
+    "\n\t3 "+str(self.atom_mass)+"\n\t4 "+str(self.atom_mass)+"\n\t5 "+str(self.atom_mass)+"\n\n"
 
     header += "Atoms\n\n"
 

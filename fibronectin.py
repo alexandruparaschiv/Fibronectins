@@ -13,9 +13,9 @@ class Fibronectins:
         self.side_lengthx = self.side_lengthy = self.side_lengthz = 200
         self.timestep = 0.008
         self.duration = 5000000
+        self.atom_mass = 1
 
-        # sets the parameters of a fibronectin monomer, controls
-        # the number of rigid r
+        # sets the parameters of a fibronectin monomer
         self.no_rods = 9
         self.beads_per_rod = 10
         self.beads_per_loop = 9
