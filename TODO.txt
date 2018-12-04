@@ -1,0 +1,10 @@
+- make sure the outer patches interact 1 to 1 
+- ensure the pair_coeffs are set correctly
+- write deactivate.py a function that selectively changes types of the the 
+
+
+
+
+- print Paris tickets
+- buy Cambridge tickets 
+- get poster tube home

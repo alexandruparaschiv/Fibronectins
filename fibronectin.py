@@ -11,13 +11,19 @@ class Fibronectins:
 
         # sets the simulation parameters
         self.side_lengthx = self.side_lengthy = self.side_lengthz = 200
+        self.timestep = 0.008
+        self.duration = 5000000
 
-        # sets the parameters of a fibronectin monomer
+        # sets the parameters of a fibronectin monomer, controls
+        # the number of rigid r
         self.no_rods = 9
         self.beads_per_rod = 10
         self.beads_per_loop = 9
         self.bead_spacing = 1
+        self.patch_offset = 1.15
+        self.loop_epsilon = 1
         self.hydrogen_bond_epsilon = 1.2
+        self.hydrogen_bond_cutoff = 1.12
 
         # contains information about the monomer topology
         self.atoms = []
@@ -57,7 +63,7 @@ class Fibronectins:
                 self.atoms.append((self.atomic_index,self.molecular_index,1,core_x,core_y,core_z))
 
                 patch_x = x
-                patch_y = y+0.15+i*0.5*self.no_rods-1
+                patch_y = y+i*0.5*self.no_rods-self.patch_offset
                 patch_z = z+j*self.bead_spacing
                 self.atoms.append((self.atomic_index+self.beads_per_rod,self.molecular_index,bead_type,
                                     patch_x,patch_y,patch_z))
@@ -80,8 +86,8 @@ class Fibronectins:
 
 
                     loop_x = x
-                    loop_y = y+i*0.5*self.no_rods - 2*self.bead_spacing*(1-math.cos(k*theta))
-                    loop_z = -1+z-2*self.bead_spacing*math.sin(k*theta)
+                    loop_y = y + i*0.5*self.no_rods - 2*self.bead_spacing*(1-math.cos(k*theta))
+                    loop_z = -1 + z - 2*self.bead_spacing*math.sin(k*theta)
 
                     self.atoms.append((self.atomic_index, self.molecular_index, 4, loop_x,loop_y,loop_z))
                     if k == 0:
@@ -98,8 +104,8 @@ class Fibronectins:
                 else:
 
                     loop_x = x
-                    loop_y = y+i*0.5*self.no_rods - 2*self.bead_spacing*(1-math.cos(k*theta))
-                    loop_z = +z+2*self.bead_spacing*math.sin(k*theta)+self.beads_per_rod*self.bead_spacing
+                    loop_y = y + i*0.5*self.no_rods - 2*self.bead_spacing*(1-math.cos(k*theta))
+                    loop_z = z + 2*self.bead_spacing*math.sin(k*theta)+self.beads_per_rod*self.bead_spacing
 
                     self.atoms.append((self.atomic_index, self.molecular_index, 5, loop_x, loop_y,loop_z))
 
