@@ -11,10 +11,9 @@ def write_lammps_file(self):
     "group\tfibronectins type 1 2 3\n"+"group loops type 4 5\n\n"+"velocity\tfibronectins create 1.0 1\n"+\
     "velocity\tloops create 1.0 1\n"+\
     "dump\tid all xyz 100 "+self.trajectory_file +"\n"+"comm_modify\tcutoff 50\n"+\
-    "dump_modify\tid sort id\n"+"\nthermo\t100\n"+"thermo_modify\tflush yes\n"+\
-    "minimize 1.0e-4 1.0e-6 100 1000\n\n"+\
+    "dump_modify\tid sort id\n"+"\nthermo\t100\n"+"thermo_modify\tflush yes\n\n"+\
     "fix\t1 fibronectins rigid/nve molecule\n"+"fix\t2 fibronectins langevin 1 1 10000 12345\n"+\
-    "fix\t3 loops nve\n\n"+\
+    "fix\t3 loops nve\n"+ "minimize 1.0e-4 1.0e-6 100 1000\n\n"+\
     "timestep\t"+str(self.timestep)+"\n"+"run\t"+str(self.duration)+"\n"
     with open("in.fibronectins",'w') as f:
         f.write("{}".format(header))

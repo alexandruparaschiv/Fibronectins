@@ -16,9 +16,9 @@ class Fibronectins:
         self.atom_mass = 1
 
         # sets the parameters of a fibronectin monomer
-        self.no_rods = 3
+        self.no_rods = 4
         self.beads_per_rod = 10
-        self.beads_per_loop = 7
+        self.beads_per_loop = 11
         self.bead_spacing = 1
         self.patch_offset = 1.15
         self.loop_epsilon = 1
@@ -98,25 +98,6 @@ class Fibronectins:
                         if i != 0:
                             self.bonds.append((self.atomic_index,self.atomic_index-4*self.beads_per_rod-self.beads_per_loop-k))
 
-                    #code to add one extra loop to the end of the monomer in case of odd number of rods
-                    """if i == self.no_rods-1:
-
-                        loop_x = x
-                        loop_y = core_y + 2*self.bead_spacing*(1-math.cos(k*theta))
-                        loop_z = -1 + z + 2*self.bead_spacing*math.sin(k*theta)+self.beads_per_rod*self.bead_spacing
-
-                        self.atoms.append((self.atomic_index, self.molecular_index, 5, loop_x, loop_y,loop_z))
-                        if k == 0:
-                            self.bonds.append((self.atomic_index,self.atomic_index-self.beads_per_rod-1))
-
-                        elif k < self.beads_per_loop - 1:
-                            self.bonds.append((self.atomic_index,self.atomic_index-1))
-
-                        else:
-                            self.bonds.append((self.atomic_index,self.atomic_index-1))
-                            self.bonds.append((self.atomic_index,self.atomic_index-3*self.beads_per_rod-2*self.beads_per_loop))"""
-
-                    #new code block ends here
 
                 else:
 
@@ -150,6 +131,22 @@ class Fibronectins:
                     self.atoms.append((self.atomic_index, self.molecular_index, 4, loop_x,loop_y,loop_z))
                     if k == 0:
                         self.bonds.append((self.atomic_index,self.atomic_index-self.beads_per_rod-self.beads_per_loop-1))
+
+                    else:
+                        self.bonds.append((self.atomic_index,self.atomic_index-1))
+
+            if (i == self.no_rods-1) and self.no_rods%2 == 0:
+                for k in range(self.beads_per_loop):
+
+                    self.atomic_index += 1
+
+                    loop_x = core_x
+                    loop_y = core_y + 2*self.bead_spacing*(1-math.cos(k*theta))
+                    loop_z = core_z - 2*self.beads_per_rod*self.bead_spacing + 2*self.bead_spacing*math.sin(-k*theta)+self.beads_per_rod*self.bead_spacing
+
+                    self.atoms.append((self.atomic_index, self.molecular_index, 4, loop_x,loop_y,loop_z))
+                    if k == 0:
+                        self.bonds.append((self.atomic_index,self.atomic_index-2*self.beads_per_rod-self.beads_per_loop))
 
                     else:
                         self.bonds.append((self.atomic_index,self.atomic_index-1))

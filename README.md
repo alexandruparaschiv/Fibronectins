@@ -19,7 +19,7 @@ This will create the topology file and the input files that can be fed directly 
 Run it with:
 
 ```bash
-./lmp_serial<in.kick
+./lmp_serial<in.fibro
 ```
 
 ---
