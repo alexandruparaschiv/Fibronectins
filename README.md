@@ -6,7 +6,7 @@ In order to run this project, download and make a local LAMMPS executable.
 
 Make the system as:
 
-'''python
+```python
 python fibronectin.py
-'''
+```
 
