@@ -10,7 +10,7 @@ In order to run this project, download and make a local LAMMPS executable.
 
 Make the system as:
 
-```python
+```python 
 python fibronectin.py
 ```
 
@@ -19,7 +19,7 @@ This will create the topology file and the input files that can be fed directly 
 Run it with:
 
 ```bash
-./lmp_serial<in.fibro
+./lmp_serial < in.fibro
 ```
 
 ---

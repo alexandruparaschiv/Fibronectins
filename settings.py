@@ -6,7 +6,7 @@ def write_lammps_file(self):
     "read_data\t"+self.topology_file+"\n"+"#restart\t10000 restart.dat\n\n"+"neighbor\t0.3 bin\n"+\
     "neigh_modify\tevery 1 delay 1\n"+"neigh_modify\texclude molecule all\n\n"+\
     "pair_style\tlj/cut 3.0\n"+ "pair_coeff\t* * 1 "+str(self.loop_epsilon)+" 1.0 \n"+\
-    "pair_coeff\t2 3 "+str(self.hydrogen_bond_epsilon)+" 1 "+str(self.hydrogen_bond_cutoff)+"\n"+\
+    "pair_coeff\t2 3 "+str(self.hydrogen_bond_epsilon)+" "+str(self.patch_diameter)+" "+str(self.hydrogen_bond_cutoff)+"\n"+\
     "pair_modify\tshift yes\n\n"+"bond_style\tharmonic\n"+"bond_coeff\t1 100 1.0"+"\n\n"+\
     "group\tfibronectins type 1 2 3\n"+"group loops type 4 5\n\n"+"velocity\tfibronectins create 1.0 1\n"+\
     "velocity\tloops create 1.0 1\n"+\
