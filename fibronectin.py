@@ -3,7 +3,7 @@
 import math
 from system import make_system
 from topology import write_topology_file
-from settings import write_lammps_file
+from settings import write_dynamics_file
 
 class Fibronectins:
 
@@ -40,7 +40,7 @@ class Fibronectins:
 
         make_system(self)
         write_topology_file(self)
-        write_lammps_file(self)
+        write_dynamics_file(self)
         print("The system was initialised successfully!")
 
 
