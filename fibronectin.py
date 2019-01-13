@@ -20,11 +20,11 @@ class Fibronectins:
         self.beads_per_rod = 10
         self.beads_per_loop = 11
         self.bead_spacing = 1
-        self.patch_offset = 1.15
+        self.patch_offset = 1.25
         self.loop_epsilon = 1
         self.patch_diameter = 0.5
-        self.hydrogen_bond_epsilon = 50
-        self.hydrogen_bond_cutoff = 1.12
+        self.hydrogen_bond_epsilon = 5
+        self.hydrogen_bond_cutoff = 0.80
 
         # contains information about the monomer topology
         self.atoms = []
