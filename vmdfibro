@@ -37,7 +37,7 @@ mol addrep top
 
 mol modstyle 0 top {VDW 0.750 10}
 mol modstyle 1 top {VDW 0.500 10}
-mol modstyle 2 top {VDW 0.750 10}
+mol modstyle 2 top {VDW 0.500 10}
 mol modstyle 3 top {VDW 0.750 10}
 mol modstyle 4 top {VDW 0.750 10}
 
