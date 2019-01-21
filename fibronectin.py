@@ -17,14 +17,14 @@ class Fibronectins:
 
         # sets the parameters of a fibronectin monomer
         self.no_rods = 4
-        self.beads_per_rod = 10
-        self.beads_per_loop = 11
+        self.beads_per_rod = 6
+        self.beads_per_loop = 8
         self.bead_spacing = 1
         self.patch_offset = 1.25
         self.loop_epsilon = 1
-        self.patch_diameter = 0.5
+        self.patch_diameter = 1.0
         self.hydrogen_bond_epsilon = 5
-        self.hydrogen_bond_cutoff = 0.80
+        self.hydrogen_bond_cutoff = 1.30
 
         # contains information about the monomer topology
         self.atoms = []
@@ -61,8 +61,9 @@ class Fibronectins:
                 core_z = z+j*self.bead_spacing
                 self.atoms.append((self.atomic_index,self.molecular_index,1,core_x,core_y,core_z))
 
+                # place the hydrogen bonding patches on alternate sides of the chain
                 patch_x = x
-                patch_y = core_y-self.patch_offset
+                patch_y = core_y-2*(2.5-bead_type)*self.patch_offset  
                 patch_z = core_z
                 self.atoms.append((self.atomic_index+self.beads_per_rod,self.molecular_index,bead_type,
                                     patch_x,patch_y,patch_z))
@@ -118,7 +119,7 @@ class Fibronectins:
                         self.bonds.append((self.atomic_index,self.atomic_index-3*self.beads_per_rod-2*self.beads_per_loop))
 
 
-            #add protein tail here
+            # add protein tail here
             if (i == self.no_rods-1) and self.no_rods%2 == 1:
                 for k in range(self.beads_per_loop):
 
