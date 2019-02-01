@@ -56,4 +56,14 @@ $sel_B set radius 1.0
 
 color Display Background white
 display depthcue off
+light 0 on
+light 1 on
+light 2 on
+light 3 on
+display nearclip set 0
+
+# position the stage and axes
+#axes location lowerleft
+axes location off
+
 
