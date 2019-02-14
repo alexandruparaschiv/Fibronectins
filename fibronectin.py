@@ -16,12 +16,13 @@ class Fibronectins:
         self.atom_mass = 1
 
         # sets the parameters of a fibronectin monomer
-        self.no_rods = 4
+        self.no_rods = 8
         self.beads_per_rod = 6
         self.beads_per_loop = 8
         self.bead_spacing = 1
         self.patch_offset = 1.25
         self.loop_epsilon = 1
+        self.rod_spacing = 4	
         self.patch_diameter = 1.0
         self.hydrogen_bond_epsilon = 5
         self.hydrogen_bond_cutoff = 1.30
@@ -57,7 +58,7 @@ class Fibronectins:
                 self.atomic_index += 1
 
                 core_x = x
-                core_y = y+(i+2)*self.no_rods
+                core_y = y+(i+2)*self.rod_spacing
                 core_z = z+j*self.bead_spacing
                 self.atoms.append((self.atomic_index,self.molecular_index,1,core_x,core_y,core_z))
 
