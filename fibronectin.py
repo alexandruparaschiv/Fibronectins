@@ -17,12 +17,12 @@ class Fibronectins:
 
         # sets the parameters of a fibronectin monomer
         self.no_rods = 8
-        self.beads_per_rod = 6
+        self.beads_per_rod = 10
         self.beads_per_loop = 8
         self.bead_spacing = 1
         self.patch_offset = 1.25
         self.loop_epsilon = 1
-        self.rod_spacing = 4	
+        self.rod_spacing = 3.55	
         self.patch_diameter = 1.0
         self.hydrogen_bond_epsilon = 5
         self.hydrogen_bond_cutoff = 1.30
