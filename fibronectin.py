@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import math
-from system import make_system
+from system import System
 from topology import write_topology_file
 from settings import write_dynamics_file
 
@@ -11,18 +11,19 @@ class Fibronectins:
 
         # sets the simulation parameters
         self.side_lengthx = self.side_lengthy = self.side_lengthz = 200
+        self.side_lengthx = 100
         self.timestep = 0.008
         self.duration = 5000000
         self.atom_mass = 1
 
         # sets the parameters of a fibronectin monomer
-        self.no_rods = 8
+        self.no_rods = 6
         self.beads_per_rod = 10
         self.beads_per_loop = 8
         self.bead_spacing = 1
         self.patch_offset = 1.25
         self.loop_epsilon = 1
-        self.rod_spacing = 3.55	
+        self.rod_spacing = 3.65
         self.patch_diameter = 1.0
         self.hydrogen_bond_epsilon = 5
         self.hydrogen_bond_cutoff = 1.30
@@ -33,13 +34,17 @@ class Fibronectins:
         self.bonds = []
         self.atomic_index = 0
         self.molecular_index = 0
+        self.x_spacing = 1.5
+        self.y_spacing = 30
+        self.z_spacing = 30
 
         # controls the output
         self.trajectory_file = "fibro.xyz"
         self.topology_file = "topology.dat"
         self.dynamics_file = "in.fibronectins"
 
-        make_system(self)
+        #make_system(self)
+        System.make_lattice(self)
         write_topology_file(self)
         write_dynamics_file(self)
         print("The system was initialised successfully!")
@@ -58,7 +63,7 @@ class Fibronectins:
                 self.atomic_index += 1
 
                 core_x = x
-                core_y = y+(i+2)*self.rod_spacing
+                core_y = y+i*self.rod_spacing
                 core_z = z+j*self.bead_spacing
                 self.atoms.append((self.atomic_index,self.molecular_index,1,core_x,core_y,core_z))
 
@@ -87,8 +92,11 @@ class Fibronectins:
                     loop_x = x
                     loop_y = core_y - 2 * self.bead_spacing*(1-math.cos(k*theta))
                     loop_z = -1 + z - 2 * self.bead_spacing*math.sin(k*theta)
-
-                    self.atoms.append((self.atomic_index, self.molecular_index, 4, loop_x,loop_y,loop_z))
+                    
+                    loop_bead_type = 6 if (k == self.beads_per_loop-1 and i==0) or (k==0 and i == 6)  else 4
+		       
+					
+                    self.atoms.append((self.atomic_index, self.molecular_index, loop_bead_type, loop_x,loop_y,loop_z))
                     if k == 0:
                         self.bonds.append((self.atomic_index,self.atomic_index-2*self.beads_per_rod))
 
@@ -107,7 +115,9 @@ class Fibronectins:
                     loop_y = core_y - 2*self.bead_spacing*(1-math.cos(k*theta))
                     loop_z = z + 2*self.bead_spacing*math.sin(k*theta)+self.beads_per_rod*self.bead_spacing
 
-                    self.atoms.append((self.atomic_index, self.molecular_index, 5, loop_x, loop_y,loop_z))
+                    loop_bead_type = 5
+
+                    self.atoms.append((self.atomic_index, self.molecular_index, loop_bead_type, loop_x, loop_y,loop_z))
 
                     if k == 0:
                         self.bonds.append((self.atomic_index,self.atomic_index-self.beads_per_rod-1))
@@ -130,7 +140,8 @@ class Fibronectins:
                     loop_y = core_y + 2*self.bead_spacing*(1-math.cos(k*theta))
                     loop_z = core_z - self.beads_per_rod*self.bead_spacing + 2*self.bead_spacing*math.sin(k*theta)+self.beads_per_rod*self.bead_spacing
 
-                    self.atoms.append((self.atomic_index, self.molecular_index, 4, loop_x,loop_y,loop_z))
+                    loop_bead_type = 4
+                    self.atoms.append((self.atomic_index, self.molecular_index, loop_bead_type, loop_x,loop_y,loop_z))
                     if k == 0:
                         self.bonds.append((self.atomic_index,self.atomic_index-self.beads_per_rod-self.beads_per_loop-1))
 
@@ -146,7 +157,8 @@ class Fibronectins:
                     loop_y = core_y + 2*self.bead_spacing*(1-math.cos(k*theta))
                     loop_z = core_z - 2*self.beads_per_rod*self.bead_spacing + 2*self.bead_spacing*math.sin(-k*theta)+self.beads_per_rod*self.bead_spacing
 
-                    self.atoms.append((self.atomic_index, self.molecular_index, 4, loop_x,loop_y,loop_z))
+                    loop_bead_type = 4 if k != self.beads_per_loop - 1 else 7
+                    self.atoms.append((self.atomic_index, self.molecular_index, loop_bead_type, loop_x,loop_y,loop_z))
                     if k == 0:
                         self.bonds.append((self.atomic_index,self.atomic_index-2*self.beads_per_rod-self.beads_per_loop))
 
@@ -159,3 +171,7 @@ class Fibronectins:
 
 if __name__ == "__main__":
     fibronectins = Fibronectins()
+
+
+
+
