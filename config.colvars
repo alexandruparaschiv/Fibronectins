@@ -1,0 +1,1137 @@
+colvar {
+	name colvar0
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 28 
+		}
+		group2 {
+			atomNumbers 176 
+		}
+	}
+}
+
+colvar {
+	name colvar1
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 380 
+		}
+		group2 {
+			atomNumbers 528 
+		}
+	}
+}
+
+colvar {
+	name colvar2
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 556 
+		}
+		group2 {
+			atomNumbers 704 
+		}
+	}
+}
+
+colvar {
+	name colvar3
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 732 
+		}
+		group2 {
+			atomNumbers 880 
+		}
+	}
+}
+
+colvar {
+	name colvar4
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 908 
+		}
+		group2 {
+			atomNumbers 1056 
+		}
+	}
+}
+
+colvar {
+	name colvar5
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 1084 
+		}
+		group2 {
+			atomNumbers 1232 
+		}
+	}
+}
+
+colvar {
+	name colvar6
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 1436 
+		}
+		group2 {
+			atomNumbers 1584 
+		}
+	}
+}
+
+colvar {
+	name colvar7
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 1612 
+		}
+		group2 {
+			atomNumbers 1760 
+		}
+	}
+}
+
+colvar {
+	name colvar8
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 1788 
+		}
+		group2 {
+			atomNumbers 1936 
+		}
+	}
+}
+
+colvar {
+	name colvar9
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 1964 
+		}
+		group2 {
+			atomNumbers 2112 
+		}
+	}
+}
+
+colvar {
+	name colvar10
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 2140 
+		}
+		group2 {
+			atomNumbers 2288 
+		}
+	}
+}
+
+colvar {
+	name colvar11
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 2316 
+		}
+		group2 {
+			atomNumbers 2464 
+		}
+	}
+}
+
+colvar {
+	name colvar12
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 2668 
+		}
+		group2 {
+			atomNumbers 2816 
+		}
+	}
+}
+
+colvar {
+	name colvar13
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 3196 
+		}
+		group2 {
+			atomNumbers 3344 
+		}
+	}
+}
+
+colvar {
+	name colvar14
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 3372 
+		}
+		group2 {
+			atomNumbers 3520 
+		}
+	}
+}
+
+colvar {
+	name colvar15
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 3548 
+		}
+		group2 {
+			atomNumbers 3696 
+		}
+	}
+}
+
+colvar {
+	name colvar16
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 4076 
+		}
+		group2 {
+			atomNumbers 4224 
+		}
+	}
+}
+
+colvar {
+	name colvar17
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 4252 
+		}
+		group2 {
+			atomNumbers 4400 
+		}
+	}
+}
+
+colvar {
+	name colvar18
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 4428 
+		}
+		group2 {
+			atomNumbers 4576 
+		}
+	}
+}
+
+colvar {
+	name colvar19
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 4780 
+		}
+		group2 {
+			atomNumbers 4928 
+		}
+	}
+}
+
+colvar {
+	name colvar20
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 5132 
+		}
+		group2 {
+			atomNumbers 5280 
+		}
+	}
+}
+
+colvar {
+	name colvar21
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 5308 
+		}
+		group2 {
+			atomNumbers 5456 
+		}
+	}
+}
+
+colvar {
+	name colvar22
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 5484 
+		}
+		group2 {
+			atomNumbers 5632 
+		}
+	}
+}
+
+colvar {
+	name colvar23
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 5660 
+		}
+		group2 {
+			atomNumbers 5808 
+		}
+	}
+}
+
+colvar {
+	name colvar24
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 5836 
+		}
+		group2 {
+			atomNumbers 5984 
+		}
+	}
+}
+
+colvar {
+	name colvar25
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 6012 
+		}
+		group2 {
+			atomNumbers 6160 
+		}
+	}
+}
+
+colvar {
+	name colvar26
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 6188 
+		}
+		group2 {
+			atomNumbers 6336 
+		}
+	}
+}
+
+colvar {
+	name colvar27
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 6364 
+		}
+		group2 {
+			atomNumbers 6512 
+		}
+	}
+}
+
+colvar {
+	name colvar28
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 6540 
+		}
+		group2 {
+			atomNumbers 6688 
+		}
+	}
+}
+
+colvar {
+	name colvar29
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 6716 
+		}
+		group2 {
+			atomNumbers 6864 
+		}
+	}
+}
+
+colvar {
+	name colvar30
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 7068 
+		}
+		group2 {
+			atomNumbers 7216 
+		}
+	}
+}
+
+colvar {
+	name colvar31
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 7420 
+		}
+		group2 {
+			atomNumbers 7568 
+		}
+	}
+}
+
+colvar {
+	name colvar32
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 7596 
+		}
+		group2 {
+			atomNumbers 7744 
+		}
+	}
+}
+
+colvar {
+	name colvar33
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 7772 
+		}
+		group2 {
+			atomNumbers 7920 
+		}
+	}
+}
+
+colvar {
+	name colvar34
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 7948 
+		}
+		group2 {
+			atomNumbers 8096 
+		}
+	}
+}
+
+colvar {
+	name colvar35
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 8828 
+		}
+		group2 {
+			atomNumbers 8976 
+		}
+	}
+}
+
+colvar {
+	name colvar36
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 9004 
+		}
+		group2 {
+			atomNumbers 9152 
+		}
+	}
+}
+
+colvar {
+	name colvar37
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 9180 
+		}
+		group2 {
+			atomNumbers 9328 
+		}
+	}
+}
+
+colvar {
+	name colvar38
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 9532 
+		}
+		group2 {
+			atomNumbers 9680 
+		}
+	}
+}
+
+colvar {
+	name colvar39
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 10060 
+		}
+		group2 {
+			atomNumbers 10208 
+		}
+	}
+}
+
+colvar {
+	name colvar40
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 10236 
+		}
+		group2 {
+			atomNumbers 10384 
+		}
+	}
+}
+
+colvar {
+	name colvar41
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 10588 
+		}
+		group2 {
+			atomNumbers 10736 
+		}
+	}
+}
+
+colvar {
+	name colvar42
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 10764 
+		}
+		group2 {
+			atomNumbers 10912 
+		}
+	}
+}
+
+colvar {
+	name colvar43
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 10940 
+		}
+		group2 {
+			atomNumbers 11088 
+		}
+	}
+}
+
+colvar {
+	name colvar44
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 11292 
+		}
+		group2 {
+			atomNumbers 11440 
+		}
+	}
+}
+
+colvar {
+	name colvar45
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 11468 
+		}
+		group2 {
+			atomNumbers 11616 
+		}
+	}
+}
+
+colvar {
+	name colvar46
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 11644 
+		}
+		group2 {
+			atomNumbers 11792 
+		}
+	}
+}
+
+colvar {
+	name colvar47
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 11820 
+		}
+		group2 {
+			atomNumbers 11968 
+		}
+	}
+}
+
+colvar {
+	name colvar48
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 12348 
+		}
+		group2 {
+			atomNumbers 12496 
+		}
+	}
+}
+
+colvar {
+	name colvar49
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 12524 
+		}
+		group2 {
+			atomNumbers 12672 
+		}
+	}
+}
+
+colvar {
+	name colvar50
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 12700 
+		}
+		group2 {
+			atomNumbers 12848 
+		}
+	}
+}
+
+colvar {
+	name colvar51
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 12876 
+		}
+		group2 {
+			atomNumbers 13024 
+		}
+	}
+}
+
+colvar {
+	name colvar52
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 13052 
+		}
+		group2 {
+			atomNumbers 13200 
+		}
+	}
+}
+
+colvar {
+	name colvar53
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 13228 
+		}
+		group2 {
+			atomNumbers 13376 
+		}
+	}
+}
+
+colvar {
+	name colvar54
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 13580 
+		}
+		group2 {
+			atomNumbers 13728 
+		}
+	}
+}
+
+colvar {
+	name colvar55
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 13756 
+		}
+		group2 {
+			atomNumbers 13904 
+		}
+	}
+}
+
+colvar {
+	name colvar56
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 13932 
+		}
+		group2 {
+			atomNumbers 14080 
+		}
+	}
+}
+
+colvar {
+	name colvar57
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 14108 
+		}
+		group2 {
+			atomNumbers 14256 
+		}
+	}
+}
+
+colvar {
+	name colvar58
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 14284 
+		}
+		group2 {
+			atomNumbers 14432 
+		}
+	}
+}
+
+colvar {
+	name colvar59
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 14636 
+		}
+		group2 {
+			atomNumbers 14784 
+		}
+	}
+}
+
+colvar {
+	name colvar60
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 14988 
+		}
+		group2 {
+			atomNumbers 15136 
+		}
+	}
+}
+
+colvar {
+	name colvar61
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 15164 
+		}
+		group2 {
+			atomNumbers 15312 
+		}
+	}
+}
+
+colvar {
+	name colvar62
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 15340 
+		}
+		group2 {
+			atomNumbers 15488 
+		}
+	}
+}
+
+colvar {
+	name colvar63
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 15516 
+		}
+		group2 {
+			atomNumbers 15664 
+		}
+	}
+}
+
+colvar {
+	name colvar64
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 15692 
+		}
+		group2 {
+			atomNumbers 15840 
+		}
+	}
+}
+
+colvar {
+	name colvar65
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 15868 
+		}
+		group2 {
+			atomNumbers 16016 
+		}
+	}
+}
+
+colvar {
+	name colvar66
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 16220 
+		}
+		group2 {
+			atomNumbers 16368 
+		}
+	}
+}
+
+colvar {
+	name colvar67
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 16924 
+		}
+		group2 {
+			atomNumbers 17072 
+		}
+	}
+}
+
+colvar {
+	name colvar68
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 17100 
+		}
+		group2 {
+			atomNumbers 17248 
+		}
+	}
+}
+
+colvar {
+	name colvar69
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 17276 
+		}
+		group2 {
+			atomNumbers 17424 
+		}
+	}
+}
+
+colvar {
+	name colvar70
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 17452 
+		}
+		group2 {
+			atomNumbers 17600 
+		}
+	}
+}
+
+colvar {
+	name colvar71
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 17628 
+		}
+		group2 {
+			atomNumbers 17776 
+		}
+	}
+}
+
+colvar {
+	name colvar72
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 17804 
+		}
+		group2 {
+			atomNumbers 17952 
+		}
+	}
+}
+
+colvar {
+	name colvar73
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 18332 
+		}
+		group2 {
+			atomNumbers 18480 
+		}
+	}
+}
+
+colvar {
+	name colvar74
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 18684 
+		}
+		group2 {
+			atomNumbers 18832 
+		}
+	}
+}
+
+colvar {
+	name colvar75
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 18860 
+		}
+		group2 {
+			atomNumbers 19008 
+		}
+	}
+}
+
+colvar {
+	name colvar76
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 19036 
+		}
+		group2 {
+			atomNumbers 19184 
+		}
+	}
+}
+
+colvar {
+	name colvar77
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 19212 
+		}
+		group2 {
+			atomNumbers 19360 
+		}
+	}
+}
+
+colvar {
+	name colvar78
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 19388 
+		}
+		group2 {
+			atomNumbers 19536 
+		}
+	}
+}
+
+colvar {
+	name colvar79
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 19916 
+		}
+		group2 {
+			atomNumbers 20064 
+		}
+	}
+}
+
+colvar {
+	name colvar80
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 20092 
+		}
+		group2 {
+			atomNumbers 20240 
+		}
+	}
+}
+
+colvar {
+	name colvar81
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 20268 
+		}
+		group2 {
+			atomNumbers 20416 
+		}
+	}
+}
+
+colvar {
+	name colvar82
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 20972 
+		}
+		group2 {
+			atomNumbers 21120 
+		}
+	}
+}
+
+colvar {
+	name colvar83
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 21148 
+		}
+		group2 {
+			atomNumbers 21296 
+		}
+	}
+}
+
+colvar {
+	name colvar84
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 21324 
+		}
+		group2 {
+			atomNumbers 21472 
+		}
+	}
+}
+
+colvar {
+	name colvar85
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 21500 
+		}
+		group2 {
+			atomNumbers 21648 
+		}
+	}
+}
+
+colvar {
+	name colvar86
+	width 0.2
+	distance {
+		group1 {
+			atomNumbers 21676 
+		}
+		group2 {
+			atomNumbers 21824 
+		}
+	}
+}
+
+harmonic {
+	name fibronectin_unfolding
+	colvars colvar0  colvar1  colvar2  colvar3  colvar4  colvar5  colvar6  colvar7  colvar8  colvar9  colvar10  colvar11  colvar12  colvar13  colvar14  colvar15  colvar16  colvar17  colvar18  colvar19  colvar20  colvar21  colvar22  colvar23  colvar24  colvar25  colvar26  colvar27  colvar28  colvar29  colvar30  colvar31  colvar32  colvar33  colvar34  colvar35  colvar36  colvar37  colvar38  colvar39  colvar40  colvar41  colvar42  colvar43  colvar44  colvar45  colvar46  colvar47  colvar48  colvar49  colvar50  colvar51  colvar52  colvar53  colvar54  colvar55  colvar56  colvar57  colvar58  colvar59  colvar60  colvar61  colvar62  colvar63  colvar64  colvar65  colvar66  colvar67  colvar68  colvar69  colvar70  colvar71  colvar72  colvar73  colvar74  colvar75  colvar76  colvar77  colvar78  colvar79  colvar80  colvar81  colvar82  colvar83  colvar84  colvar85  colvar86 
+	centers 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100
+	forceConstant 0.01
+}

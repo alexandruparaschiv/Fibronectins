@@ -1,30 +1,35 @@
 #!/usr/bin/env python3
 
-def write_topology_file(self):
+class Topology:
 
-    header = "LAMMPS Description\n\n"+"\t"+str(self.atomic_index)+" atoms\n"+"\t"+\
-    str(len(self.bonds))+" bonds\n \t0 angles\n \t0 dihedrals\n \t0 impropers\n\n \t5 atom types\n \t1 bond types"+\
-    "\n \t0 angle types\n \t0 dihedral types\n \t0 improper types\n\n \t"+str(-self.side_lengthx)+\
-    " "+str(self.side_lengthx)+" xlo xhi\n \t"+str(-self.side_lengthy)+\
-    " "+str(self.side_lengthy)+" ylo yhi\n \t"+str(-self.side_lengthz)+\
-    " "+str(self.side_lengthz)+" zlo zhi\n \t"
+    def __init__(self):
+        pass
 
+    @staticmethod
+    def write_topology_file(fibro):
 
-    header += "\nMasses\n\n \t1 "+str(self.atom_mass)+"\n\t2 "+str(self.atom_mass)+\
-    "\n\t3 "+str(self.atom_mass)+"\n\t4 "+str(self.atom_mass)+"\n\t5 "+str(self.atom_mass)+"\n\n"
+        header = "LAMMPS Description\n\n" + "\t" + str(fibro.atomic_index) + " atoms\n" + "\t" + \
+        str(len(fibro.bonds)) + " bonds\n \t0 angles\n \t0 dihedrals\n \t0 impropers\n\n \t7 atom types\n \t1 bond types" + \
+        "\n \t0 angle types\n \t0 dihedral types\n \t0 improper types\n\n \t" + str(-fibro.side_lengthx) + \
+        " " + str(fibro.side_lengthx) + " xlo xhi\n \t" + str(-fibro.side_lengthy) + \
+        " " + str(fibro.side_lengthy) + " ylo yhi\n \t" + str(-fibro.side_lengthz) + \
+        " " + str(fibro.side_lengthz) + " zlo zhi\n \t"
 
-    header += "Atoms\n\n"
+        header += "\nMasses\n\n \t1 "+str(fibro.atom_mass)+"\n\t2 "+str(fibro.atom_mass)+\
+        "\n\t3 "+str(fibro.atom_mass)+"\n\t4 "+str(fibro.atom_mass)+"\n\t5 "+str(fibro.atom_mass)+\
+        "\n\t6 "+str(fibro.atom_mass)+"\n\t7 "+str(fibro.atom_mass)+"\n\n"
 
-    for i in range(len(self.atoms)):
-        header += "\t"+" "+str(self.atoms[i][0])+" "+str(self.atoms[i][1])+" "+str(self.atoms[i][2])+" 0 "+\
-        str(self.atoms[i][3])+" "+str(self.atoms[i][4])+" "+str(self.atoms[i][5])+" 0 0 0\n"
+        header += "Atoms\n\n"
 
-    header += "Bonds\n\n"
+        for i in range(len(fibro.atoms)):
+            header += "\t"+" "+str(fibro.atoms[i][0])+" "+str(fibro.atoms[i][1])+" "+str(fibro.atoms[i][2])+" 0 "+\
+            str(fibro.atoms[i][3])+" "+str(fibro.atoms[i][4])+" "+str(fibro.atoms[i][5])+" 0 0 0\n"
 
-    for i in range(len(self.bonds)):
-        header += "\t"+" "+str(i+1)+" 1 "+ str(self.bonds[i][0])+" "+\
-                    str(self.bonds[i][1])+"\n"
+        header += "Bonds\n\n"
 
+        for i in range(len(fibro.bonds)):
+            header += "\t"+" "+str(i+1)+" 1 "+ str(fibro.bonds[i][0])+" "+\
+                        str(fibro.bonds[i][1])+"\n"
 
-    with open(self.topology_file,'w') as f:
-        f.write("{}".format(header))
+        with open(fibro.topology_file,'w') as f:
+            f.write("{}".format(header))
