@@ -75,7 +75,6 @@ class Fibronectins:
                     self.bonds.append((self.atomic_index,self.atomic_index+1))
                 self.bonds.append((self.atomic_index,self.atomic_index+self.beads_per_rod))
 
-
             self.atomic_index += self.beads_per_rod
 
             for k in range(self.beads_per_loop):
