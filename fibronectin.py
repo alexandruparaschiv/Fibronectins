@@ -17,7 +17,7 @@ class Fibronectins:
         self.atom_mass = 1
 
         # sets the parameters of a fibronectin monomer
-        self.no_rods = 6
+        self.no_rods = 14
         self.beads_per_rod = 10
         self.beads_per_loop = 8
         self.bead_spacing = 1
@@ -52,7 +52,10 @@ class Fibronectins:
 
         for i in range(self.no_rods):
 
-            bead_type = 2 if i % 2 == 1 else 3
+            if i < 4 or i > 11:
+                bead_type = 8 if i % 2 == 1 else 9
+            else:
+                bead_type = 2 if i % 2 == 1 else 3
             self.molecular_index += 1
 
             for j in range(self.beads_per_rod):
@@ -66,8 +69,11 @@ class Fibronectins:
 
                 # place the hydrogen bonding patches on alternate sides of the chain
                 patch_x = x
-                patch_y = core_y-2*(2.5-bead_type)*self.patch_offset  
+                patch_y = core_y-2*(2.5-bead_type)*self.patch_offset
                 patch_z = core_z
+
+                if bead_type in [8,9]:
+                    patch_y = core_y-2*(8.5-bead_type)*self.patch_offset
                 self.atoms.append((self.atomic_index+self.beads_per_rod,self.molecular_index,bead_type,
                                     patch_x,patch_y,patch_z))
 
@@ -88,8 +94,8 @@ class Fibronectins:
                     loop_x = x
                     loop_y = core_y - 2 * self.bead_spacing*(1-math.cos(k*theta))
                     loop_z = -1 + z - 2 * self.bead_spacing*math.sin(k*theta)
-                    
-                    loop_bead_type = 6 if (k == self.beads_per_loop-1 and i==0) or (k==0 and i == 6)  else 4
+
+                    loop_bead_type = 6 if (k == self.beads_per_loop-1 and i==0) or (k==0 and i == self.no_rods)  else 4
                     self.atoms.append((self.atomic_index, self.molecular_index, loop_bead_type, loop_x,loop_y,loop_z))
                     if k == 0:
                         self.bonds.append((self.atomic_index,self.atomic_index-2*self.beads_per_rod))
@@ -123,7 +129,7 @@ class Fibronectins:
                         self.bonds.append((self.atomic_index,self.atomic_index-1))
                         self.bonds.append((self.atomic_index,self.atomic_index-3*self.beads_per_rod-2*self.beads_per_loop))
 
-            # protein tail is added  here
+            # protein tail is added here
             if (i == self.no_rods-1) and self.no_rods%2 == 1:
                 for k in range(self.beads_per_loop):
 
@@ -161,7 +167,3 @@ class Fibronectins:
 
 if __name__ == "__main__":
     fibronectins = Fibronectins()
-
-
-
-

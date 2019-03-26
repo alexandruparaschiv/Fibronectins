@@ -9,15 +9,17 @@ class Topology:
     def write_topology_file(fibro):
 
         header = "LAMMPS Description\n\n" + "\t" + str(fibro.atomic_index) + " atoms\n" + "\t" + \
-        str(len(fibro.bonds)) + " bonds\n \t0 angles\n \t0 dihedrals\n \t0 impropers\n\n \t7 atom types\n \t1 bond types" + \
+        str(len(fibro.bonds)) + " bonds\n \t0 angles\n \t0 dihedrals\n \t0 impropers\n\n \t9 atom types\n \t1 bond types" + \
         "\n \t0 angle types\n \t0 dihedral types\n \t0 improper types\n\n \t" + str(-fibro.side_lengthx) + \
         " " + str(fibro.side_lengthx) + " xlo xhi\n \t" + str(-fibro.side_lengthy) + \
         " " + str(fibro.side_lengthy) + " ylo yhi\n \t" + str(-fibro.side_lengthz) + \
         " " + str(fibro.side_lengthz) + " zlo zhi\n \t"
 
+
         header += "\nMasses\n\n \t1 "+str(fibro.atom_mass)+"\n\t2 "+str(fibro.atom_mass)+\
         "\n\t3 "+str(fibro.atom_mass)+"\n\t4 "+str(fibro.atom_mass)+"\n\t5 "+str(fibro.atom_mass)+\
-        "\n\t6 "+str(fibro.atom_mass)+"\n\t7 "+str(fibro.atom_mass)+"\n\n"
+        "\n\t6 "+str(fibro.atom_mass)+"\n\t7 "+str(fibro.atom_mass)+"\n\t8 "+str(fibro.atom_mass)+\
+        "\n\t9 "+str(fibro.atom_mass)+"\n\n"
 
         header += "Atoms\n\n"
 
