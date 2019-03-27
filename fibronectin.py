@@ -10,7 +10,8 @@ class Fibronectins:
     def __init__(self):
 
         # sets the simulation parameters
-        self.side_lengthx = self.side_lengthy = self.side_lengthz = 200
+        self.side_lengthx = self.side_lengthy = self.side_lengthz = 300
+        self.side_lengthx = 300
         self.side_lengthx = 100
         self.timestep = 0.008
         self.duration = 5000000
@@ -35,7 +36,7 @@ class Fibronectins:
         self.atomic_index = 0
         self.molecular_index = 0
         self.x_spacing = 1.5
-        self.y_spacing = 30
+        self.y_spacing = 50
         self.z_spacing = 30
 
         # controls the output
