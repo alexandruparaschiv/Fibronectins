@@ -33,6 +33,7 @@ class Fibronectins:
         self.atoms = []
         self.molecules = []
         self.bonds = []
+        self.monomer_chunks = []
         self.atomic_index = 0
         self.molecular_index = 0
         self.x_spacing = 1.5
@@ -51,6 +52,7 @@ class Fibronectins:
 
     def make_monomer(self,x,y,z):
 
+        self.monomer_chunks.append(self.atomic_index)
         for i in range(self.no_rods):
 
             if i < 4 or i > 11:
@@ -164,6 +166,8 @@ class Fibronectins:
 
                     else:
                         self.bonds.append((self.atomic_index,self.atomic_index-1))
+
+        self.monomer_chunks.append(self.atomic_index) 
 
 
 if __name__ == "__main__":
