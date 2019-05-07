@@ -20,6 +20,20 @@ class Dynamics:
                  "pair_coeff\t2 3 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
             fibro.hydrogen_bond_cutoff) + "\n" + \
                  "pair_coeff\t 3 3 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
+            fibro.hydrogen_bond_cutoff) + "\n" 
+        header += "pair_coeff\t 8 8 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
+            fibro.hydrogen_bond_cutoff) + "\n" + \
+                 "pair_coeff\t8 9 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
+            fibro.hydrogen_bond_cutoff) + "\n" + \
+                 "pair_coeff\t 8 9 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
+            fibro.hydrogen_bond_cutoff) + "\n" 
+        header += "pair_coeff\t 2 8 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
+            fibro.hydrogen_bond_cutoff) + "\n" + \
+                 "pair_coeff\t3 8 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
+            fibro.hydrogen_bond_cutoff) + "\n" + \
+                 "pair_coeff\t 2 9 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
+            fibro.hydrogen_bond_cutoff) + "\n" + \
+                 "pair_coeff\t 3 9 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
             fibro.hydrogen_bond_cutoff) + "\n" + \
                  "pair_modify\tshift yes\n\n" + "bond_style\tfene\n" + "bond_coeff\t1 30.0 1.5 1.0 1.0\n\n"
 
