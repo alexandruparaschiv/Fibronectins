@@ -1,0 +1,104 @@
+set sel_A [atomselect top "element H"]
+set sel_B [atomselect top "element He"]
+set sel_C [atomselect top "element Li"]
+set sel_D [atomselect top "element Be"]
+set sel_E [atomselect top "element B"]
+set sel_F [atomselect top "element C"]
+set sel_G [atomselect top "element N"]
+set sel_H [atomselect top "element O"]
+set sel_I [atomselect top "element F"]
+
+color Element H 19
+color Element He 1
+color Element Li 0
+color Element Be 19
+color Element B 19
+color Element C 27
+color Element N 27
+color Element O 28
+color Element F 28
+
+
+display projection orthographic
+mol delrep 0 top
+
+mol selection element H
+mol color Element
+mol addrep top
+
+mol selection element He
+mol color Element
+mol addrep top
+
+
+mol selection element Li
+mol color Element
+mol addrep top
+
+mol selection element Be
+mol color Element
+mol addrep top
+
+mol selection element B
+mol color Element 
+mol addrep top
+
+mol selection element C
+mol color Element 
+mol addrep top
+
+mol selection element N
+mol color Element
+mol addrep top
+
+mol selection element O
+mol color Element
+mol addrep top
+
+mol selection element F
+mol color Element
+mol addrep top
+
+mol modstyle 0 top {VDW 0.750 10}
+mol modstyle 1 top {VDW 0.750 10}
+mol modstyle 2 top {VDW 0.750 10}
+mol modstyle 3 top {VDW 0.750 10}
+mol modstyle 4 top {VDW 0.750 10}
+mol modstyle 5 top {VDW 0.750 10}
+mol modstyle 6 top {VDW 0.650 10}
+mol modstyle 7 top {VDW 0.650 10}
+mol modstyle 8 top {VDW 0.650 10}
+
+mol modmaterial 0 top Diffuse
+mol modmaterial 1 top Diffuse
+mol modmaterial 2 top Diffuse
+mol modmaterial 3 top Diffuse
+mol modmaterial 4 top Diffuse
+mol modmaterial 5 top Diffuse
+mol modmaterial 6 top Diffuse
+mol modmaterial 7 top Diffuse
+mol modmaterial 8 top Diffuse
+
+$sel_A set radius 1.0
+$sel_B set radius 1.0
+$sel_C set radius 1.0
+$sel_D set radius 1.0
+$sel_E set radius 1.0
+$sel_F set radius 1.0
+$sel_G set radius 1.0
+$sel_H set radius 1.0
+
+
+color Display Background white
+display depthcue off
+light 0 on
+light 1 on
+light 2 on
+light 3 on
+display nearclip set 0
+
+# position the stage and axes
+#axes location lowerleft
+axes location off
+
+
