@@ -14,7 +14,8 @@ class Fibronectins:
         self.side_lengthx = 300
         self.side_lengthx = 100
         self.timestep = 0.008
-        self.duration = 5000000
+        self.equilibration = 200000
+        self.duration = 50000000
         self.atom_mass = 1
 
         # sets the parameters of a fibronectin monomer

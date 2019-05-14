@@ -15,7 +15,7 @@ from periodic_kdtree.periodic_kdtree import PeriodicCKDTree
 
 
 class MovieBuilder:
-    def __init__(self,types,x,y,z):
+    def __init__(self):
 
         fibro = pickle.load(open("fibronectin_system.pkl",'rb'))
 
@@ -27,9 +27,9 @@ class MovieBuilder:
         interacting_atom_types = [2,3,8,9]
 
 
-        #df = pd.read_csv('last_frame.xyz',skiprows=2,delimiter=' ',names=['type','x','y','z'])
+        df = pd.read_csv('last_frame.xyz',skiprows=2,delimiter=' ',names=['type','x','y','z'])
         names = ['type','x', 'y', 'z']
-        arrays = [types,x,y,z]
+        arrays = [df.type,df.x,df.y,df.z]
         df = pd.DataFrame(dict(zip(names, arrays)), columns=names)
         coloured_df = df
 
@@ -176,14 +176,16 @@ class MovieBuilder:
             for monomer in cluster:
                 new_types[monomer*fibronectin_length:(monomer+1)*fibronectin_length] = len(cluster)
         coloured_df.type = new_types
-        with open("coloured.xyz",'a') as infile:
-            infile.write("50000\n")
-            infile.write("Atoms. Timestep: 0\n")
-            for i in range(coloured_df.type.values.shape[0]):
-                infile.write("{} {} {} {}\n".format(coloured_df.type.values[i],coloured_df.x.values[i],coloured_df.y.values[i],coloured_df.z.values[i]))
+        np.savetxt('cluster_distribution',new_types)
+        #with open("coloured.xyz",'a') as infile:
+        #    infile.write("50000\n")
+        #    infile.write("Atoms. Timestep: 0\n")
+        #    for i in range(coloured_df.type.values.shape[0]):
+        #        infile.write("{} {} {} {}\n".format(coloured_df.type.values[i],coloured_df.x.values[i],coloured_df.y.values[i],coloured_df.z.values[i]))
 
 
 
 		
-
+if __name__ == "__main__":
+    m = MovieBuilder()
 
