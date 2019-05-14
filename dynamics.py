@@ -46,7 +46,7 @@ class Dynamics:
         
        # defines the fixes and  simulation time steps and duration
         header += "fix\t1 fibronectins rigid/nve molecule\n" + "fix\t2 fibronectins langevin 1 1 10000 12345\n" + \
-                 "fix\t3 loops nvt temp 1.0 1.0 1\n" +"minimize 1.0e-4 1.0e-6 100 1000\n\n"  +"run\t"+str(self.equilibration)+" \n"+ \
+                 "fix\t3 loops nvt temp 1.0 1.0 1\n" +"minimize 1.0e-4 1.0e-6 100 1000\n\n"  +"run\t"+str(fibro.equilibration)+" \n"+ \
                  "fix       Colvars all colvars config.colvars\n" + "minimize 1.0e-4 1.0e-6 100 1000\n\n" + \
                  "timestep\t" + str(fibro.timestep) + "\n" + str(fibro.duration) + "\n"
 
