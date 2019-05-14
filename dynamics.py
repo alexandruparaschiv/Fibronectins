@@ -36,8 +36,6 @@ class Dynamics:
                  "pair_coeff\t 3 9 " + str(fibro.hydrogen_bond_epsilon) + " " + str(fibro.patch_diameter) + " " + str(
             fibro.hydrogen_bond_cutoff) + "\n" + \
                  "pair_modify\tshift yes\n\n" + "bond_style\tfene\n" + "bond_coeff\t1 30.0 1.5 1.0 1.0\n\n"
-        print(str(fibro.timestep))
-        print(fibro.duration)
         # defines the groups and output files
         header += "group\tfibronectins type 1 2 3 8 9\n" + "group loops type 4 5 6 7\n\n" + "group left_ends type 6\n" + "group right_ends type 7\n" + \
                  "group molecules union fibronectins loops\n"+"velocity\tfibronectins create 1.0 1\n" + "velocity\tloops create 1.0 1\n" + \
