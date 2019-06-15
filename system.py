@@ -10,7 +10,7 @@ from itertools import product
 
 class System:
 
-    side_length = 5
+    side_length = 2
 
     def __init__(self):
         pass

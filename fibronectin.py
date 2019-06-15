@@ -10,25 +10,25 @@ class Fibronectins:
     def __init__(self):
 
         # sets the simulation parameters
-        self.side_lengthx = self.side_lengthy = self.side_lengthz = 300
-        self.side_lengthx = 300
         self.side_lengthx = 100
+        self.side_lengthy = 300
+        self.side_lengthz = 300
         self.timestep = 0.008
-        self.equilibration = 200000
+        self.equilibration = 2000
         self.duration = 50000000
         self.atom_mass = 1
 
         # sets the parameters of a fibronectin monomer
-        self.no_rods = 14
+        self.no_rods = 16
         self.beads_per_rod = 10
-        self.beads_per_loop = 8
+        self.beads_per_loop = 10
         self.bead_spacing = 1
-        self.patch_offset = 1.25
+        self.patch_offset = 0.75
         self.loop_epsilon = 1
-        self.rod_spacing = 3.65
-        self.patch_diameter = 1.0
+        self.rod_spacing = 2.5
+        self.patch_diameter = 0.50
         self.hydrogen_bond_epsilon = 5
-        self.hydrogen_bond_cutoff = 1.30
+        self.hydrogen_bond_cutoff = 0.75
 
         # contains information about the monomer topology
         self.atoms = []
@@ -96,7 +96,7 @@ class Fibronectins:
                 if orientation == 1:
 
                     loop_x = x
-                    loop_y = core_y - 2 * self.bead_spacing*(1-math.cos(k*theta))
+                    loop_y = core_y - 1 * self.bead_spacing*(1-math.cos(k*theta))
                     loop_z = -1 + z - 2 * self.bead_spacing*math.sin(k*theta)
 
                     loop_bead_type = 6 if (k == self.beads_per_loop-1 and i==0) or (k==0 and i == self.no_rods)  else 4
@@ -116,7 +116,7 @@ class Fibronectins:
                 else:
 
                     loop_x = x
-                    loop_y = core_y - 2*self.bead_spacing*(1-math.cos(k*theta))
+                    loop_y = core_y - 1*self.bead_spacing*(1-math.cos(k*theta))
                     loop_z = z + 2*self.bead_spacing*math.sin(k*theta)+self.beads_per_rod*self.bead_spacing
 
                     loop_bead_type = 5
@@ -168,7 +168,7 @@ class Fibronectins:
                     else:
                         self.bonds.append((self.atomic_index,self.atomic_index-1))
 
-        self.monomer_chunks.append(self.atomic_index) 
+        self.monomer_chunks.append(self.atomic_index)
 
 
 if __name__ == "__main__":

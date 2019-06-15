@@ -40,11 +40,11 @@ mol color Element
 mol addrep top
 
 mol selection element B
-mol color Element 
+mol color Element
 mol addrep top
 
 mol selection element C
-mol color Element 
+mol color Element
 mol addrep top
 
 mol selection element N
@@ -60,14 +60,14 @@ mol color Element
 mol addrep top
 
 mol modstyle 0 top {VDW 0.750 10}
-mol modstyle 1 top {VDW 0.750 10}
-mol modstyle 2 top {VDW 0.750 10}
+mol modstyle 1 top {VDW 0.380 10}
+mol modstyle 2 top {VDW 0.380 10}
 mol modstyle 3 top {VDW 0.750 10}
 mol modstyle 4 top {VDW 0.750 10}
 mol modstyle 5 top {VDW 0.750 10}
-mol modstyle 6 top {VDW 0.650 10}
-mol modstyle 7 top {VDW 0.650 10}
-mol modstyle 8 top {VDW 0.650 10}
+mol modstyle 6 top {VDW 0.750 10}
+mol modstyle 7 top {VDW 0.380 10}
+mol modstyle 8 top {VDW 0.380 10}
 
 mol modmaterial 0 top Diffuse
 mol modmaterial 1 top Diffuse
@@ -100,5 +100,3 @@ display nearclip set 0
 # position the stage and axes
 #axes location lowerleft
 axes location off
-
-
