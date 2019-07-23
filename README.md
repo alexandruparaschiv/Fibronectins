@@ -1,4 +1,4 @@
-[![Generic badge](https://img.shields.io/badge/status-in progress-green.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/status-in%20progress-green.svg)](https://shields.io/)
 # Fibronectins
 
 
