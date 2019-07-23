@@ -2,10 +2,10 @@
 
 
 <p align="center">
-  <img src="snapshots/fibronectin_network.png" width="350" height="350" title="hover text">
+  <img src="snapshots/Fn_mesh.png" width="350" height="350" title="hover text">
 </p>
 
-This is a coarse-grained model of a fibronectin monomer. The monomer undergoes unfolding thus exposing hydrophobic binding sites that can interact with other protein monomers and thus drive the self-assembly process. The resulting structure is a fibrillar matrix, its morphology depending on various properties that will be investigated in this project.
+Fibronectins are structural proteins that provide a template for the growth of the extracellular matrix. The fibronectin protein is essentially a mechanochemical switch that changes conformation upon binding to cellular receptors. The monomer experiences cytoskeletal forces and  undergoes unfolding thus exposing hydrophobic binding sites. These can interact with other protein monomers and thus drive a self-assembly process. The resulting structure is a fibrillar matrix, its morphology depending on various properties that will be investigated in this project.
 
 ---
 
@@ -33,4 +33,4 @@ In order to visualise the trajectory output, install the VMD package and do:
 ```bash
 vmd fibro.xyz -e vmdfibro
 ```
-
+Alternatively, visualisation programs such as OVITO can be used.
